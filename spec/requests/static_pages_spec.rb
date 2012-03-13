@@ -21,35 +21,35 @@ describe "Static pages" do
   describe "Help page" do
     before { visit help_path }
     
-    let(:heading)    { 'Sample App' }
+    let(:heading)    { 'Help' }
     let(:page_title) { '' }
 
     it_should_behave_like "all static pages"
-    it { should_not have_selector 'title', text: '| Help' }
+    it { should have_selector 'title', text: '| Help' }
    
   end
 
   describe "About page" do
     before { visit about_path }
     
-    let(:heading)    { 'Sample App' }
+    let(:heading)    { 'About' }
     let(:page_title) { '' }
 
     it_should_behave_like "all static pages"
-    it { should_not have_selector 'title', text: '| About Us' }
+    it { should have_selector 'title', text: '| About Us' }
 
   end
 
   describe "Contact page" do
     before { visit contact_path }
      
-    let(:heading)    { 'Sample App' }
+    let(:heading)    { 'Contact' }
     let(:page_title) { '' }
 
     it_should_behave_like "all static pages"
-    it { should_not have_selector 'title', text: '| Contact' }
+    it { should have_selector 'title', text: '| Contact' }
    end
-end
+
 
 it "should have the right links on the layout" do
     visit root_path
@@ -60,7 +60,8 @@ it "should have the right links on the layout" do
     click_link "Contact"
     page.should have_selector 'title', text: full_title('Contact')
     click_link "Home"
-    page.should have_selector 'title', text: full_title('Home')
+    page.should_not have_selector 'title', text: full_title('Home')
     click_link "Sign up now!"
     page.should have_selector 'title', text: full_title('Sign up')
   end
+end

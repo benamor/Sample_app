@@ -1,28 +1,14 @@
-<<<<<<< HEAD
+
 SampleApp::Application.routes.draw do
   resources :users
 
   root to: 'static_pages#home'
-=======
-  SampleApp::Application.routes.draw do
-  get "users/new"
 
-  root to: 'static_pages#home'
-
->>>>>>> sign-up
   match '/signup',  to: 'users#new'
-
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
-<<<<<<< HEAD
-  match '/contact', to: 'static_pages#contact'  
-  
-=======
   match '/contact', to: 'static_pages#contact'
 
-
- 
->>>>>>> sign-up
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

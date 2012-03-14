@@ -4,16 +4,13 @@
 
 $grayMediumLight: #eaeaea;
 
-<<<<<<< HEAD
+
 @mixin box_sizing {
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
   box-sizing: border-box;
 }
 
-
-=======
->>>>>>> sign-up
 /* universal */
 
 html {
@@ -110,7 +107,6 @@ footer {
     }
   }
 }
-<<<<<<< HEAD
 
 /* miscellaneous */
 
@@ -174,5 +170,3 @@ input, textarea, select, .uneditable-input {
   @extend .control-group;
   @extend .error;
  }
-=======
->>>>>>> sign-up

@@ -25,12 +25,9 @@ describe "Static pages" do
     let(:page_title) { '' }
 
     it_should_behave_like "all static pages"
-<<<<<<< HEAD
     it { should have_selector 'title', text: '| Help' }
    
-=======
-    it { should_not have_selector 'title', text: '| Help' }
->>>>>>> sign-up
+
   end
 
   describe "About page" do
@@ -40,14 +37,9 @@ describe "Static pages" do
     let(:page_title) { '' }
 
     it_should_behave_like "all static pages"
-<<<<<<< HEAD
     it { should have_selector 'title', text: '| About Us' }
 
   end
-=======
-    it { should_not have_selector 'title', text: '| About Us' }
-end
->>>>>>> sign-up
 
   describe "Contact page" do
     before { visit contact_path }
@@ -56,14 +48,10 @@ end
     let(:page_title) { '' }
 
     it_should_behave_like "all static pages"
-<<<<<<< HEAD
     it { should have_selector 'title', text: '| Contact' }
    end
 
-=======
-    it { should_not have_selector 'title', text: '| Contact' } 
-  end
->>>>>>> sign-up
+
 
 it "should have the right links on the layout" do
     visit root_path
